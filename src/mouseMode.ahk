@@ -52,7 +52,7 @@ $N::
 $K::
 {
 	if (status = Mode.mouse){
-		MouseMove, 0, (1)*mouseStepLength, 0, R  ; 将鼠标指针向下移动
+		MouseMove, 0, (1)*mouseStepLength, 0, R
 	}else{
 		Send , k
 	}
@@ -62,7 +62,7 @@ $K::
 $M::
 {
 	if (status = Mode.mouse){
-		MouseMove, 0, (1)*mouseStepLength*mouseStepLength, 0, R  ; 将鼠标指针向下移动
+		MouseMove, 0, (1)*mouseStepLength*multipleForFast, 0, R
 	}else{
 		Send , m
 	}
@@ -73,7 +73,7 @@ $M::
 $L::
 {
 	if (status = Mode.mouse){
-		MouseMove, 0, (-1)*mouseStepLength, 0, R  ; 将鼠标指针向下移动
+		MouseMove, 0, (-1)*mouseStepLength, 0, R
 	}else{
 		Send , l
 	}
@@ -83,7 +83,7 @@ $L::
 $,::
 {
 	if (status = Mode.mouse){
-		MouseMove, 0, (-1)*mouseStepLength*mouseStepLength, 0, R  ; 将鼠标指针向下移动
+		MouseMove, 0, (-1)*mouseStepLength*multipleForFast, 0, R
 	}else{
 		Send , ,
 	}
