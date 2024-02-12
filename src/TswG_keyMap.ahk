@@ -16,13 +16,18 @@ RAlt::Backspace
 
 ; 正斜杠键与右Shift键交换
 ;SC029::Send {RShift}
-; 当按下/键时按下右Shift键
-/::Send {RShift down}
+; ; 当按下/键时按下右Shift键
+; /::Send {RShift down}
 
-; 当抬起/键时抬起右Shift键
-/ Up::Send {RShift up}
+; ; 当抬起/键时抬起右Shift键
+; / Up::Send {RShift up}
 	
-RShift::Send {/}
+; RShift::Send {/ down}
+; RShift up::Send {/ up}
+
+/::RShift
+RShift::/
+
 
 ; 原[键 -> y
 [::y

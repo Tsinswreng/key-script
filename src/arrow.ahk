@@ -1,3 +1,23 @@
+;
+;Home
+^Left::
+  SendInput, {Home}
+  Return
+
++^Left::
+  SendInput, {Shift Down}{Home}{Shift Up}
+  Return
+
+
+;End
+^Right::
+  SendInput, {End}
+  Return
+
++^Right::
+  SendInput, {Shift Down}{End}{Shift Up}
+  Return
+
 ;Home
 !I::
   SendInput, {Home}
