@@ -1,7 +1,7 @@
 #NoEnv  ; 阻止其他程序的键盘操作
 #SingleInstance, Force
 #MaxHotkeysPerInterval 100
-
+;#HotkeyInterval 1
 
 Mode := {}
 
@@ -13,6 +13,10 @@ status := Mode.normal
 mouseStepLength = 10
 multipleForFast = 4
 
+$F1::
+{
+	Send, {F1}
+}
 
 F1 & 0::
 {
@@ -26,12 +30,24 @@ F1 & 9::
 	return
 }
 
+$![:: ; 若用ahk改y則不能寫alt + Y、當以原ᵗ鍵潙準
+{
+	if (status = Mode.normal){
+		status := Mode.mouse
+	}else{
+		status := Mode.normal
+	}
+	return
+}
+
 ; 要寫$、否則Send , j後仍入此即致死循環
 ; cursor move left
 $J::
 {
 	if (status = Mode.mouse){
-		MouseMove, (-1)*mouseStepLength, 0, 0, R
+		{
+			MouseMove, (-1)*mouseStepLength, 0, 0, R
+		}
 	}else{
 		Send , j
 	}
@@ -203,7 +219,7 @@ $2::
 $3::
 {
 	if (status = Mode.mouse){
-		mouseStepLength := 10
+		mouseStepLength := 20
 	}else{
 		Send, 3
 	}
@@ -213,7 +229,7 @@ $3::
 $4::
 {
 	if (status = Mode.mouse){
-		mouseStepLength := 20
+		mouseStepLength := 50
 	}else{
 		Send, 4
 	}
