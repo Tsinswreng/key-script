@@ -141,6 +141,28 @@ $w::
 	return
 }
 
+$^w::
+{
+	if (status = Mode.mouse){
+		;Send {LButton}
+		Send, {Ctrl down}{Click down}{KeyWait, w}{Click up}{Ctrl up}
+	}else{
+		Send, ^w
+	}
+	return
+}
+
+$+w::
+{
+	if (status = Mode.mouse){
+		;Send {LButton}
+		Send, {Shift down}{Click down}{KeyWait, w}{Click up}{Shift up}
+	}else{
+		Send, W
+	}
+	return
+}
+
 $e::
 {
 	if (status = Mode.mouse){
