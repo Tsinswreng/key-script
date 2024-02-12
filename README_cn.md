@@ -2,7 +2,9 @@
 # Tsinswreng AutoHotkey script
 
 ## 運行
+
 需要安裝AutoHotkey
+
 若不效、可試用管理員模式運行
 
 ## mouseMode.ahk
