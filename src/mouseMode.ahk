@@ -13,7 +13,7 @@ status := Mode.normal
 mouseStepLength = 10
 multipleForFast = 4
 sleepDelay = 1
-
+sleepDelay_wheel = 50
 $F1::
 {
 	Send, {F1}
@@ -219,7 +219,7 @@ $a::
 		While GetKeyState("a", "P")
 		{
 			MouseClick, WheelLeft,,,1,0,D,R
-			Sleep, sleepDelay
+			Sleep, sleepDelay_wheel
 		}
 	}else{
 		Send, a
@@ -234,7 +234,7 @@ $s::
 		While GetKeyState("s", "P")
 		{
 			MouseClick, WheelDown,,,1,0,D,R
-			Sleep, sleepDelay
+			Sleep, sleepDelay_wheel
 		}
 		
 	}else{
@@ -250,7 +250,7 @@ $d::
 		While GetKeyState("d", "P")
 		{
 			MouseClick, WheelUp,,,1,0,D,R
-			Sleep, sleepDelay
+			Sleep, sleepDelay_wheel
 		}
 		
 	}else{
@@ -265,7 +265,7 @@ $f::
 		While GetKeyState("d", "P")
 		{
 			MouseClick, WheelRight,,,1,0,D,R
-			Sleep, sleepDelay
+			Sleep, sleepDelay_wheel
 		}
 		
 	}else{

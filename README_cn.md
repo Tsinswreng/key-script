@@ -64,4 +64,4 @@ alt+ n m , . 實現 光標 左 下 右 上 移動、一次性移4次
 
 ## TODO
 
-- [ ] mouseMode取消長按判定時延
+- [x] mouseMode取消長按判定時延
