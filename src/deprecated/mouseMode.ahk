@@ -12,7 +12,6 @@ status := Mode.normal
 
 mouseStepLength = 10
 multipleForFast = 4
-sleepDelay = 1
 
 $F1::
 {
@@ -46,10 +45,8 @@ $![:: ; 若用ahk改y則不能寫alt + Y、當以原ᵗ鍵潙準
 $J::
 {
 	if (status = Mode.mouse){
-		While GetKeyState("j", "P")
 		{
 			MouseMove, (-1)*mouseStepLength, 0, 0, R
-			Sleep, sleepDelay
 		}
 	}else{
 		Send , j
@@ -60,12 +57,7 @@ $J::
 $N::
 {
 	if (status = Mode.mouse){
-		While GetKeyState("n", "P")
-		{
-			MouseMove, (-1)*mouseStepLength*multipleForFast, 0, 0, R
-			Sleep, sleepDelay
-		}
-		
+		MouseMove, (-1)*mouseStepLength*multipleForFast, 0, 0, R
 	}else{
 		Send , n
 	}
@@ -76,12 +68,7 @@ $N::
 $K::
 {
 	if (status = Mode.mouse){
-		While GetKeyState("k", "P")
-		{
-			MouseMove, 0, (1)*mouseStepLength, 0, R
-			Sleep, sleepDelay
-		}
-		
+		MouseMove, 0, (1)*mouseStepLength, 0, R
 	}else{
 		Send , k
 	}
@@ -91,12 +78,7 @@ $K::
 $M::
 {
 	if (status = Mode.mouse){
-		While GetKeyState("m", "P")
-		{
-			MouseMove, 0, (1)*mouseStepLength*multipleForFast, 0, R
-			Sleep, sleepDelay
-		}
-		
+		MouseMove, 0, (1)*mouseStepLength*multipleForFast, 0, R
 	}else{
 		Send , m
 	}
@@ -107,12 +89,7 @@ $M::
 $L::
 {
 	if (status = Mode.mouse){
-		While GetKeyState("l", "P")
-		{
-			MouseMove, 0, (-1)*mouseStepLength, 0, R
-			Sleep, sleepDelay
-		}
-		
+		MouseMove, 0, (-1)*mouseStepLength, 0, R
 	}else{
 		Send , l
 	}
@@ -122,11 +99,7 @@ $L::
 $,::
 {
 	if (status = Mode.mouse){
-		While GetKeyState(",", "P")
-		{
-			MouseMove, 0, (-1)*mouseStepLength*multipleForFast, 0, R
-			Sleep, sleepDelay
-		}
+		MouseMove, 0, (-1)*mouseStepLength*multipleForFast, 0, R
 	}else{
 		Send , ,
 	}
@@ -137,12 +110,7 @@ $,::
 $;::
 {
 	if (status = Mode.mouse){
-		While GetKeyState(";", "P")
-		{
-			MouseMove, (1)*mouseStepLength, 0, 0, R
-			Sleep, sleepDelay
-		}
-		
+		MouseMove, (1)*mouseStepLength, 0, 0, R
 	}else{
 		Send , {;}
 	}
@@ -152,11 +120,7 @@ $;::
 $.::
 {
 	if (status = Mode.mouse){
-		While GetKeyState(".", "P")
-		{
-			MouseMove, (1)*mouseStepLength*multipleForFast, 0, 0, R
-			Sleep, sleepDelay
-		}
+		MouseMove, (1)*mouseStepLength*multipleForFast, 0, 0, R
 	}else{
 		Send , .
 	}
@@ -214,13 +178,8 @@ $e::
 ;wheel
 $a::
 {
-	
 	if (status = Mode.mouse){
-		While GetKeyState("a", "P")
-		{
-			MouseClick, WheelLeft,,,1,0,D,R
-			Sleep, sleepDelay
-		}
+		MouseClick, WheelLeft,,,1,0,D,R
 	}else{
 		Send, a
 	}
@@ -229,14 +188,8 @@ $a::
 
 $s::
 {
-	
 	if (status = Mode.mouse){
-		While GetKeyState("s", "P")
-		{
-			MouseClick, WheelDown,,,1,0,D,R
-			Sleep, sleepDelay
-		}
-		
+		MouseClick, WheelDown,,,1,0,D,R
 	}else{
 		Send, s
 	}
@@ -247,12 +200,7 @@ $s::
 $d::
 {
 	if (status = Mode.mouse){
-		While GetKeyState("d", "P")
-		{
-			MouseClick, WheelUp,,,1,0,D,R
-			Sleep, sleepDelay
-		}
-		
+		MouseClick, WheelUp,,,1,0,D,R
 	}else{
 		Send, d
 	}
@@ -262,12 +210,7 @@ $d::
 $f::
 {
 	if (status = Mode.mouse){
-		While GetKeyState("d", "P")
-		{
-			MouseClick, WheelRight,,,1,0,D,R
-			Sleep, sleepDelay
-		}
-		
+		MouseClick, WheelRight,,,1,0,D,R
 	}else{
 		Send, f
 	}
