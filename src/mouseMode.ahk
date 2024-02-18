@@ -262,7 +262,7 @@ $d::
 $f::
 {
 	if (status = Mode.mouse){
-		While GetKeyState("d", "P")
+		While GetKeyState("f", "P")
 		{
 			MouseClick, WheelRight,,,1,0,D,R
 			Sleep, sleepDelay_wheel
