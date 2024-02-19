@@ -10,10 +10,11 @@ Mode["mouse"] := 1
 
 status := Mode.normal
 
-mouseStepLength = 10
-multipleForFast = 4
-sleepDelay = 1
-sleepDelay_wheel = 50
+mouseStepLength := 10
+multipleForFast := 4
+sleepDelay := 1
+sleepDelay_wheel := 50
+doublePressInterval := 400
 $F1::
 {
 	Send, {F1}
@@ -38,6 +39,7 @@ $![:: ; 若用ahk改y則不能寫alt + Y、當以原ᵗ鍵潙準
 	}else{
 		status := Mode.normal
 	}
+	
 	return
 }
 
@@ -315,3 +317,26 @@ $4::
 	return
 }
 
+$G::
+{
+	sp := mouseStepLength
+	if (status = Mode.mouse)
+	{
+		if (A_PriorHotkey <> "$G" or A_TimeSincePriorHotkey > 400)
+		{
+		}
+		else
+		{
+			sp := sp*4
+		}
+		While GetKeyState("g", "P")
+		{
+			MouseMove, (-1)*sp, 0, 0, R
+			Sleep, sleepDelay
+		}
+	}else
+	{
+		Send , g
+	}
+	return
+}
